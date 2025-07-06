@@ -1,0 +1,67 @@
+main{
+    margin-top: 4rem;
+    display: grid;
+    place-content: center;
+    gap: 2rem;
+}
+@keyframes ball1{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-20px);
+    }
+}
+
+.ball{
+    width: 75px;
+    height: 75px;
+    background: slateblue; 
+    border-radius: 50%;
+
+}
+
+.ball1{
+    animation: ball1 300ms alternate infinite 
+    cubic-bezier(.2, .65, .6, 1);
+}
+
+.box{
+    display: flex;
+    gap: 2rem;
+}
+
+.balls{
+    width: 75px;
+    height: 75px;
+    background:palevioletred; 
+    border-radius: 50%;
+
+}
+
+@keyframes balls{
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(
+            var(--bounce-offset)
+        );
+    }
+}
+
+.balls{
+    animation: balls alternate infinite cubic-bezier(.2, .65, .6, 1);
+}
+.balls.one{
+    --bounce-offset: -20px;
+    animation-duration: 200ms;
+}
+.balls.two{
+    --bounce-offset: -30px;
+    animation-duration: 300ms;
+}
+.balls.three{
+    --bounce-offset: -40px;
+    animation-duration: 400ms;
+}
