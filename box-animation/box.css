@@ -1,0 +1,79 @@
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin-top: 3rem;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background: slateblue;
+    padding: 8px;
+    display: grid;
+    place-content: center;
+    color: white;
+    text-align: center;
+}
+
+@keyframes box1{
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+.box1{
+    animation:box1 2000ms;
+    animation-timing-function: linear;    
+}
+
+@keyframes box2{
+    from{
+        transform: translateX(-100%);
+        opacity: 0.25;
+    }
+    to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+.box2{
+    animation: box2 1000ms;
+    animation-iteration-count: 3;
+}
+
+@keyframes box3{
+    from{
+        transform: rotate(-50deg) translateY(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: rotate(0deg) translateY(0%);
+        opacity: 1;
+    }
+}
+.box3{
+    margin-left: 2rem;
+    animation: box3 1000ms;
+}
+
+@keyframes box4{
+    from{
+        transform: translateX(-100%);
+    }to{
+        transform: translateX(0%);
+    }
+}
+.box4{
+    animation: box4 1000ms;
+}
