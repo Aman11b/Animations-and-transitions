@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    /* margin: 4rem; */
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    background: slateblue;
+
+
+    display: grid;
+    color: aliceblue;
+    place-content: center;
+    text-align: center;
+    font-size: 1rem;
+}
+@keyframes box1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.box1{
+    animation: box1 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes box2{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+
+}
+.box2{
+    background: palevioletred;
+
+    animation: box2 2000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    /* animation direction controlls order od sequence
+    alternate -> toggle between normal and reverse
+    */
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes box3{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    /* from to only applies when animation is running they why at the end it comes back again */
+
+}
+.box3{
+
+
+    animation: box3 2000ms;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes box4{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+    /* from to only applies when animation is running they why at the end it comes back again */
+
+}
+.box4{
+
+
+    animation: box4 2000ms;
+    animation-timing-function: ease-in;
+
+    opacity: 0;
+    /* fall back declaration */
+}
+
+@keyframes box5{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+.box5{
+    animation: box5 2000ms;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    /* final value persisted going forward */
+}
+
+@keyframes box6{
+    from{
+        transform: translateX(-100%);
+        opacity: 0.25;
+    }to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+.box6{
+    animation: box6 1000ms;
+    animation-delay: 500ms;
+}
+
+@keyframes box7{
+    from{
+        transform: translateX(-60%);
+        opacity: 0.25;
+    }to{
+        transform: translateX(0%);
+        opacity: 1;
+    }
+
+}
+.box7{
+    animation: box6 1000ms;
+    animation-delay: 500ms;
+    animation-fill-mode: backwards;
+}
+
